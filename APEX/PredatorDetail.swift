@@ -11,7 +11,6 @@ import MapKit
 struct PredatorDetail: View {
     
     let predator: ApexPredator
-//    @State var position: MapCameraPosition
     
     var body: some View {
         GeometryReader { geo in
@@ -40,7 +39,6 @@ struct PredatorDetail: View {
                     Text(predator.name)
                     
                     // Current location
-//                    Map(position: <#T##Binding<MapCameraPosition>#>)
                     
                     // Apperance in
                     Text("Appears In:")
@@ -53,7 +51,7 @@ struct PredatorDetail: View {
                     // Movie moments
                     Text("Movie Moments")
                         .font(.title)
-                        .padding(.top, 15)
+                        .padding(.top, 11)
                     ForEach (predator.movieScenes) { secne in
                         Text(secne.movie)
                             .font(.title2)
